@@ -1,3 +1,36 @@
+// loader
+document.addEventListener("load", function(){
+    let preloader = document.querySelector(".preloader")
+    let loader = document.querySelector(".loader")
+    
+    let count = 0;
+    setInterval(function counterFunction(){
+        if(count < 101){
+            loader.style.width = `${count}%`;
+            count++;
+        }
+        else{
+            clearInterval(counterFunction);
+            fadeOut(preloader)
+        }
+    }, 20)
+})
+
+// fade out preloader
+function fadeOut(e){
+    e.style.opacity = 1;
+
+    (function fade(){
+        if((e.style.opacity -= .1) < 0){
+            e.style.display = "none";
+        }
+        else{
+            requestAnimationFrame(fade);
+        }
+    })()
+}
+
+
 //show navbar after home page
 const header = document.querySelector("header");
 const about = document.querySelector("#welcome-section");
