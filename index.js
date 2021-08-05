@@ -1,19 +1,20 @@
 // loader
 window.addEventListener("load", function(){
     let preloader = document.querySelector(".preloader")
+    let loaderBar = document.querySelector(".loader-bar");
     let loader = document.querySelector(".loader")
     
     let count = 0;
     setInterval(function counterFunction(){
         if(count < 101){
-            loader.style.width = `${count}%`;
+            loaderBar.style.width = `${count}%`;
             count++;
         }
         else{
             clearInterval(counterFunction);
             fadeOut(preloader)
         }
-    }, 5)
+    }, 10)
 })
 
 // fade out preloader

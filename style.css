@@ -34,9 +34,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1rem 0;
 }
 
-input, textarea, button, select, a{
+input, textarea, button, select, a {
     -webkit-tap-highlight-color: transparent;
 }
+
 a {
     text-decoration: none;
     color: white;
@@ -88,15 +89,41 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
-.preloader .loader {
+.preloader .loader-bar {
     position: absolute;
     background: rgb(104, 0, 122);
     height: 3px;
     top: 0;
     left: 0;
+}
+
+.preloader .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    padding: 0;
+    background-color: purple;
+    border-radius: 100%;
+    -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+    animation: sk-scaleout 1s infinite ease-in-out;
+}
+
+@keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
 }
 
 /* loader end */
