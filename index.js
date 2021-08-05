@@ -13,7 +13,7 @@ window.addEventListener("load", function(){
             clearInterval(counterFunction);
             fadeOut(preloader)
         }
-    }, 10)
+    }, 5)
 })
 
 // fade out preloader
