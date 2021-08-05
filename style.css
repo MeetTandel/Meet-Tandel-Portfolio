@@ -94,7 +94,7 @@ li {
 .preloader .loader-bar {
     position: absolute;
     background: rgb(104, 0, 122);
-    height: 3px;
+    height: 5px;
     top: 0;
     left: 0;
 }
