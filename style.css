@@ -80,6 +80,7 @@ li {
     left: 0;
     background: black;
     width: 100%;
+    z-index: 200;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -90,7 +91,7 @@ li {
 .preloader .loader {
     position: absolute;
     background: rgb(104, 0, 122);
-    height: 20px;
+    height: 3px;
     top: 0;
     left: 0;
 }
