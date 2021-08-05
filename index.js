@@ -1,5 +1,5 @@
 // loader
-document.addEventListener("load", function(){
+window.addEventListener("load", function(){
     let preloader = document.querySelector(".preloader")
     let loader = document.querySelector(".loader")
     
@@ -13,7 +13,7 @@ document.addEventListener("load", function(){
             clearInterval(counterFunction);
             fadeOut(preloader)
         }
-    }, 20)
+    }, 10)
 })
 
 // fade out preloader
