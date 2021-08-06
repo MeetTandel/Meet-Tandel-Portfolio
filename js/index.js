@@ -1,8 +1,14 @@
-// loader
+//scroll should return to top on reload of page
+window.onbeforeunload = function () {
+    if(window.scrollTo) window.scrollTo(0,0);
+}
+
+// preloader
 window.addEventListener("load", function(){
     let preloader = document.querySelector(".preloader")
     let loaderBar = document.querySelector(".loader-bar");
     
+    //horizontal bar
     let count = 0;
     setInterval(function counterFunction(){
         if(count < 101){
@@ -16,7 +22,7 @@ window.addEventListener("load", function(){
     }, 10)
 })
 
-// fade out preloader
+// fade out preloader(animation)
 function fadeOut(e){
     e.style.opacity = 1;
 
