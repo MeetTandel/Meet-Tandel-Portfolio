@@ -1,13 +1,13 @@
 //scroll should return to top on reload of page
 window.onbeforeunload = function () {
-        if (window.scrollTo) window.scrollTo(0, 0);
+    if (window.scrollTo) window.scrollTo(0, 0);
 }
 
 // preloader
-window.addEventListener("load", function () {
-    let preloader = document.querySelector(".preloader")
-    let loaderBar = document.querySelector(".loader-bar");
+let preloader = document.querySelector(".preloader")
+let loaderBar = document.querySelector(".loader-bar");
 
+function implementLoader(time) {
     //horizontal bar
     let count = 0;
     setInterval(function counterFunction() {
@@ -19,22 +19,25 @@ window.addEventListener("load", function () {
             clearInterval(counterFunction);
             fadeOut(preloader)
         }
-    }, 10)
-})
+    }, time)
 
-// fade out preloader(animation)
-function fadeOut(e) {
-    e.style.opacity = 1;
+    // fade out preloader(animation)
+    function fadeOut(e) {
+        e.style.opacity = 1;
 
-    (function fade() {
-        if ((e.style.opacity -= .1) < 0) {
-            e.style.display = "none";
-        }
-        else {
-            requestAnimationFrame(fade);
-        }
-    })()
+        (function fade() {
+            if ((e.style.opacity -= .1) < 0) {
+                e.style.display = "none";
+            }
+            else {
+                requestAnimationFrame(fade);
+            }
+        })()
+    }   
 }
+
+window.addEventListener("load", () => implementLoader(10))
+
 
 //show navbar after home page
 const header = document.querySelector("header");
@@ -79,27 +82,24 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     });
 });
 
-//on clicking submit button in form prevent it from reloading
-const submitBtn = document.querySelector(".submit-btn")
-
-submitBtn.addEventListener("click", (e) => e.preventDefault())
-
 //nav-toggle for mobile device
 const navToggle = document.querySelector('.nav-toggle');
 const backgroundToggle = document.querySelector('.toggle-background');
 const nav = document.querySelector('.header-nav-wrap');
 
-navToggle.addEventListener('click', () => {
+function toggleNav(){
     nav.classList.toggle('nav-visible');
     backgroundToggle.classList.toggle('nav-toggle-background');
     navToggle.classList.toggle('ham-toggle');
+}
+
+navToggle.addEventListener('click', () => {
+    toggleNav();
 })
 
 //on clicking links in mobile view navbar should hide
 links.forEach(link => {
-    link.addEventListener("click", function() {
-        nav.classList.toggle('nav-visible');
-        backgroundToggle.classList.toggle('nav-toggle-background');
-        navToggle.classList.toggle('ham-toggle');
+    link.addEventListener("click", function () {
+        toggleNav();
     })
 })
