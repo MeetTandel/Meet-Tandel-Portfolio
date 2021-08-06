@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meet Tandel</title>
-    <link rel="icon" href="images/logo.jpeg" type="image/icon type">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.jpeg" type="image/icon type">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -270,26 +270,22 @@
 
             <div class="row contact__main">
                 <div class="col-eight tab-full contact__form">
-                    <form name="contactForm" id="contactForm" method="post" action="https://formspree.io/">
+                    <form name="contactForm" id="contactForm" method="post" action="https://formspree.io/f/xzbyjoge">
                         <fieldset>
                             <div class="form-field">
-                                <input name="name" type="text" id="contactName" placeholder="Name" value=""
-                                    minlength="2" required="" aria-required="true" class="full-width">
+                                <input name="Name" type="text" id="contactName" placeholder="Name" value=""
+                                    minlength="2" required aria-required="true" class="full-width">
                             </div>
                             <div class="form-field">
-                                <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value=""
-                                    required="" aria-required="true" class="full-width">
+                                <input name="Email" type="email" id="contactEmail" placeholder="Email" value=""
+                                    required aria-required="true" class="full-width">
                             </div>
                             <div class="form-field">
-                                <input name="subject" type="text" id="contactSubject" placeholder="Subject" value=""
-                                    class="full-width">
+                                <textarea name="Message" id="contactMessage" placeholder="Message" rows="10" cols="50"
+                                    required aria-required="true" class="full-width" style="resize: none"></textarea>
                             </div>
                             <div class="form-field">
-                                <textarea name="message" id="contactMessage" placeholder="Message" rows="10" cols="50"
-                                    required="" aria-required="true" class="full-width" style="resize: none"></textarea>
-                            </div>
-                            <div class="form-field">
-                                <button class="full-width btn--primary" type="submit">
+                                <button class="full-width btn--primary submit-btn" type="submit">
                                     Submit
                                 </button>
                                 <div class="submit-loader">

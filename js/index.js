@@ -1,21 +1,21 @@
 //scroll should return to top on reload of page
 window.onbeforeunload = function () {
-    if(window.scrollTo) window.scrollTo(0,0);
+        if (window.scrollTo) window.scrollTo(0, 0);
 }
 
 // preloader
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
     let preloader = document.querySelector(".preloader")
     let loaderBar = document.querySelector(".loader-bar");
-    
+
     //horizontal bar
     let count = 0;
-    setInterval(function counterFunction(){
-        if(count < 101){
+    setInterval(function counterFunction() {
+        if (count < 101) {
             loaderBar.style.width = `${count}%`;
             count++;
         }
-        else{
+        else {
             clearInterval(counterFunction);
             fadeOut(preloader)
         }
@@ -23,19 +23,18 @@ window.addEventListener("load", function(){
 })
 
 // fade out preloader(animation)
-function fadeOut(e){
+function fadeOut(e) {
     e.style.opacity = 1;
 
-    (function fade(){
-        if((e.style.opacity -= .1) < 0){
+    (function fade() {
+        if ((e.style.opacity -= .1) < 0) {
             e.style.display = "none";
         }
-        else{
+        else {
             requestAnimationFrame(fade);
         }
     })()
 }
-
 
 //show navbar after home page
 const header = document.querySelector("header");
@@ -43,14 +42,11 @@ const about = document.querySelector("#welcome-section");
 const links = document.querySelectorAll(".header-nav li")
 const sections = document.querySelectorAll("section[id]")
 
-console.log()
 window.addEventListener("scroll", function () {
     // show navbar in about section 
-
     // get scroll position
-    let scrollY = window.pageYOffset; 
-    if(scrollY == 0) about.offsetTop.classList.add("active");
-    console.log(scrollY)
+    let scrollY = window.pageYOffset;
+    // if (scrollY == 0) about.offsetTop.classList.add("active");
 
     if (scrollY >= about.offsetHeight - 10) {
         header.classList.add("sticky");
@@ -59,15 +55,15 @@ window.addEventListener("scroll", function () {
     }
 
     //loop through sections to get height, top and ID of respective section
-    sections.forEach(section =>{
+    sections.forEach(section => {
         let sectionHeight = section.offsetHeight;
         let sectionTop = section.offsetTop - 10;
         let sectionId = section.getAttribute("id");
 
-        if(scrollY > sectionTop && scrollY < sectionHeight + sectionTop){
+        if (scrollY > sectionTop && scrollY < sectionHeight + sectionTop) {
             document.querySelector("#navbar a[href*=" + sectionId + "]").classList.add("active")
         }
-        else{
+        else {
             document.querySelector("#navbar a[href*=" + sectionId + "]").classList.remove("active")
         }
     })
@@ -83,6 +79,11 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     });
 });
 
+//on clicking submit button in form prevent it from reloading
+const submitBtn = document.querySelector(".submit-btn")
+
+submitBtn.addEventListener("click", (e) => e.preventDefault())
+
 //nav-toggle for mobile device
 const navToggle = document.querySelector('.nav-toggle');
 const backgroundToggle = document.querySelector('.toggle-background');
@@ -96,7 +97,7 @@ navToggle.addEventListener('click', () => {
 
 //on clicking links in mobile view navbar should hide
 links.forEach(link => {
-    link.addEventListener("click", function () {
+    link.addEventListener("click", function() {
         nav.classList.toggle('nav-visible');
         backgroundToggle.classList.toggle('nav-toggle-background');
         navToggle.classList.toggle('ham-toggle');
