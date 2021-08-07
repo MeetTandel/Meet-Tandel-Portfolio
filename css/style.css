@@ -621,6 +621,7 @@ li {
 .about-content .skills {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     max-width: 35rem;
     margin-top: 2rem;
 }
@@ -634,8 +635,6 @@ li {
     max-width: 60px;
     display: inline-block;
     text-transform: uppercase;
-    margin-right: 3rem;
-    margin-bottom: 1.2rem;
     margin: 1rem 1rem;
     font-size: 0.7rem;
     letter-spacing: 3px;
@@ -670,6 +669,12 @@ li {
     .about-content .col-six {
         width: 100%;
         padding: 0.5em 2em;
+    }
+    .about-content .col-six h3 {
+        text-align: center;
+    }
+    .about-content .skills {
+        justify-content: center;
     }
     .about-content .skills li {
         max-width: 50px;
@@ -706,11 +711,13 @@ li {
 }
 
 .projects .project {
-    /* max-width: 50rem; */
     width: 100%;
     background: #fff;
     box-shadow: 0 0 2rem rgb(150 150 150 / 20%);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .projects .project .project-img-cont {
