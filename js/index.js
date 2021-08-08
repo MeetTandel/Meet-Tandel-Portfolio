@@ -12,7 +12,8 @@ function implementLoader(time) {
     let count = 0;
     setInterval(function counterFunction() {
         if (count < 101) {
-            loaderBar.style.width = `${count}%`;
+            // loaderBar.style.width = `${count}%`;
+            // loaderBar.style.display = "block";
             count++;
         }
         else {
@@ -36,7 +37,7 @@ function implementLoader(time) {
     }   
 }
 
-window.addEventListener("load", () => implementLoader(10))
+window.addEventListener("load", () => implementLoader(15))
 
 
 //show navbar after home page

@@ -92,11 +92,31 @@ li {
 }
 
 .preloader .loader-bar {
-    position: absolute;
+    position: fixed;
     background: rgb(104, 0, 122);
     height: 5px;
     top: 0;
     left: 0;
+    animation-name: loader;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    /* animation-timing-function: cubic-bezier(.38,.16,.57,.82); */
+}
+
+@keyframes loader {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 50%;
+        left: 0;
+    }
+    100% {
+        width: 50%;
+        left: 100%;
+    }
 }
 
 .preloader .loader {
@@ -929,7 +949,7 @@ input[type='email'], input[type='number'], input[type='search'], input[type='tex
     transition: all 0.3s ease-in-out;
 }
 
-textarea{
+textarea {
     padding-top: 1em;
 }
 
