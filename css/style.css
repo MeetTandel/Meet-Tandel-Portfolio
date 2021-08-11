@@ -269,7 +269,7 @@ li {
     .hamburger, .hamburger::before, .hamburger::after {
         display: block;
         margin: 0 auto;
-        height: 1.5px;
+        height: 1px;
         background: white;
     }
     .hamburger::before {
@@ -742,7 +742,7 @@ li {
 
 .projects .project .project-img-cont {
     margin: 0 auto;
-    width: 70%;
+    padding: 2rem 2rem 0 2rem;
 }
 
 .project h3 {
