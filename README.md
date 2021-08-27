@@ -5,4 +5,4 @@ Live: https://meettandel.netlify.app/
 
 Preview of Website:
 
-![](images/portfolio.gif)
+![](images/gifs/portfolio.gif)
