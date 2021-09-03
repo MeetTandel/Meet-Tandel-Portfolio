@@ -108,7 +108,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     max-width: 35rem;
-    margin: 0.8rem 2rem;
+    margin: 0.8rem 1.5rem;
 }
 
 .skills img {
@@ -131,6 +131,9 @@
     .col-full {
         width: 80%;
         padding: 1em;
+    }
+    .project h3{
+        padding-left: 1.5em;
     }
     .projects {
         width: 100%;
@@ -187,6 +190,9 @@
     .projects .project {
         flex-direction: column;
     }
+    .project h3{
+        padding-left: 1.2em;
+    }
     .projects .project .project-actions {
         display: flex;
         margin: 0;
@@ -194,7 +200,6 @@
         padding: 1rem;
     }
     .projects .project .project-desc {
-        /* min-height: 100px; */
         text-align: left;
         padding: 0 1.5em;
     }
