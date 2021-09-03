@@ -759,10 +759,31 @@ li {
 
 .projects .project .project-actions {
     width: 100%;
-    padding: 2.5rem;
+    padding: 0.5rem 2.5rem 1.5rem;
     justify-content: space-evenly;
 }
 
+.skills {
+    max-width: 35rem;
+    margin: 0.5rem;
+}
+
+.skills img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.skills li {
+    max-width: 50px;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0.5rem auto;
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
 .projects .project .project-actions .project-btn {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -800,7 +821,7 @@ li {
     width: 200px;
     border: 3px solid rgb(0, 0, 0);
     color: #000000;
-    margin: 5rem auto 0;
+    margin: 4rem auto 0;
     letter-spacing: 0.2rem;
     transition: all 0.5s ease-in-out;
     background: transparent;
