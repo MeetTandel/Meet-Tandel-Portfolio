@@ -883,7 +883,7 @@ li {
         flex-direction: row;
     }
     .projects .project .project-actions {
-        padding: 2rem;
+        padding: 0.5rem 0.5rem 1rem;
     }
     .projects .project .project-actions .project-btn {
         font-size: 0.7rem;
