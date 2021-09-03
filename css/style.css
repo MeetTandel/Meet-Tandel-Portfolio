@@ -752,7 +752,7 @@ li {
 }
 
 .projects .project .project-desc {
-    min-height: 100px;
+    /* min-height: 100px; */
     text-align: center;
     padding: 0 2.2em;
 }
@@ -768,7 +768,7 @@ li {
     font-weight: 700;
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     margin-bottom: 0;
     min-width: 160px;
     width: 100%;
@@ -787,6 +787,33 @@ li {
     box-shadow: 4px 4px 3px rgb(150 150 150);
 }
 
+.project-content__button {
+    display: block;
+}
+
+.project-content__button .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    display: block;
+    width: 200px;
+    border: 3px solid rgb(0, 0, 0);
+    color: #000000;
+    margin: 5rem auto 0;
+    letter-spacing: 0.2rem;
+    transition: all 0.5s ease-in-out;
+    background: transparent;
+    padding: 1rem 1.5rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.project-content__button .btn:hover {
+    color: white;
+    background: rgb(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+}
 @media screen and (max-width: 1200px) {
     .col-full {
         width: 80%;

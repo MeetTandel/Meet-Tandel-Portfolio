@@ -35,7 +35,7 @@ function implementLoader(time) {
     }   
 }
 
-window.addEventListener("load", () => implementLoader(15))
+window.addEventListener("load", () => implementLoader(5))
 
 
 //show navbar after home page
