@@ -36,3 +36,25 @@ window.addEventListener("load", () => implementLoader(3))
 const links = document.querySelectorAll(".header-nav li a")
 
 links[0].classList.remove("active")
+
+//nav-toggle for mobile device
+const navToggle = document.querySelector('.nav-toggle');
+const backgroundToggle = document.querySelector('.toggle-background');
+const nav = document.querySelector('.header-nav-wrap');
+
+function toggleNav(){
+    nav.classList.toggle('nav-visible');
+    backgroundToggle.classList.toggle('nav-toggle-background');
+    navToggle.classList.toggle('ham-toggle');
+}
+
+navToggle.addEventListener('click', () => {
+    toggleNav();
+})
+
+//on clicking links in mobile view navbar should hide
+links.forEach(link => {
+    link.addEventListener("click", function () {
+        toggleNav();
+    })
+})
