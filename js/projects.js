@@ -8,7 +8,7 @@ function implementLoader(time) {
     //horizontal bar
     let count = 0;
     setInterval(function counterFunction() {
-        if (count < 70) {
+        if (count < 50) {
             count++;
         }
         else {
